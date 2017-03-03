@@ -1,0 +1,27 @@
+{
+  "name": "generator-template",
+  "version": "1.0.0",
+  "description": "A module template for Node.js using Babel, jest, eslint and istanbul",
+  "main": "lib/index.js",
+  "repository": "https://github.com/davidfekke/generator-template",
+  "author": "David Fekke <david@fekke.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "yarn run clean && babel src -d lib",
+    "eslint": "eslint src/**/*.js",
+    "test": "yarn run eslint && jest --coverage"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-preset-env": "^1.1.11",
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "istanbul": "^0.4.5",
+    "jest": "^19.0.2",
+    "rimraf": "^2.6.1"
+  }
+}
